@@ -27,6 +27,9 @@ class Lobby extends Component {
 
     handleCreateRoom(e){
         e.preventDefault();
+        if(!this.state.roomName){
+            return;
+        }
 
         this.props.createRoom(this.state.roomName);
 
